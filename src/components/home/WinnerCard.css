@@ -1,0 +1,92 @@
+
+
+@media screen and (max-width: 480px) {
+  .winner-card {
+    border: 1px solid #e4aeae;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    padding: 10px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* background-color: #d8b9aa; */
+  }
+
+  .winner-card img {
+    width: 110px;
+    height: auto;
+    border-radius: 50%;
+    margin: auto;
+  }
+
+  .winner-card h3 {
+    margin: 20px 0px 10px 0px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 990px) {
+  .winner-card {
+    border: 1px solid #e4aeae;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 10px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    padding: 10px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* background-color: #d8b9aa; */
+  }
+
+  .winner-card img {
+    width: 130px;
+    height: auto;
+    border-radius: 50%;
+  }
+
+  .winner-card h3 {
+    margin: 20px 0px 10px 0px;
+  }
+}
+
+@media screen and (min-width: 991px) {
+  .winner-card {
+    border: 1px solid #e4aeae;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 10px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    padding: 10px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* background-color: #d8b9aa; */
+  }
+
+  .winner-card img {
+    width: 130px;
+    height: auto;
+    border-radius: 50%;
+  }
+
+  .winner-card h3 {
+    margin: 20px 0px 10px 0px;
+    color: rgb(13, 49, 252);
+  }
+}
+
+/* .winner-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  } */
+
+.winner-card h4 {
+    color: red;
+  }
+
+.winner-card p {
+  color: #340ce2;
+}

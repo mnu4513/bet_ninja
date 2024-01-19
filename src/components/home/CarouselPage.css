@@ -1,0 +1,34 @@
+/* CarouselPage.css */
+/* Apply your styles for the CarouselPage component */
+
+
+
+.carousel-container {
+  background-image: url('../../assets/img/wins.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+
+    /* max-width: 800px; */
+    /* margin: 0 auto; */
+    padding: 40px;
+  }
+  
+  .carousel-item {
+    outline: none; /* Remove focus outline on carousel items */
+  }
+  
+  /* Additional styles for responsiveness */
+  @media (max-width: 768px) {
+    .carousel-container {
+      width: 90%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .carousel-container {
+      width: 100%;
+    }
+  }
+  

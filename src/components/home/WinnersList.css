@@ -1,0 +1,29 @@
+
+
+
+.carousel-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .carousel-container h1 {
+    color: rgba(45, 252, 183, 0.733);
+  }
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .carousel-container {
+      width: 90%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .carousel-container {
+      width: 100%;
+    }
+  }
+  
