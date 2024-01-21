@@ -5,7 +5,6 @@ import ReactDOM from 'react-dom/client';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './index.css';
-// import App from './App'
 import Home from './components/Home';
 import Error404 from './components/Error404';
 import NavBar from './components/NavBar';
@@ -17,14 +16,9 @@ import TermsAndConditions from './components/policyPage/TermsAndConditions';
 import TDSDeduction from './components/policyPage/TDSDeduction';
 import RefundCancellation from './components/policyPage/RefundCancellation';
 import ReferEarn from './components/policyPage/ReferEarn';
-import GameFeatures from './components/quickLinksPages/GameFeatures';
-import Blog from './components/quickLinksPages/Blog';
 import AboutUs from './components/quickLinksPages/AboutUs';
 import HowToPlay from './components/quickLinksPages/HowToPlay';
-import Tournaments from './components/quickLinksPages/Tournaments';
-import TypesOfPlayers from './components/quickLinksPages/TypesOfPlayers';
 
-// import root from './App';
 
 const App = () => {
   return (
@@ -54,7 +48,7 @@ const appRouter = createBrowserRouter([
         element: <Home />
       },
       {
-        path: '/contect-me',
+        path: '/contact-me',
         element: <ContectMe />
       }, {
         path: '/policy/announcements',
@@ -75,23 +69,11 @@ const appRouter = createBrowserRouter([
         path: 'refer-earn',
         element: <ReferEarn />
       }, {
-        path: "/page/game-features",
-        element: <GameFeatures />
-      }, {
-        path: '/page/blog',
-        element: <Blog />
-      }, {
         path: '/page/about-us',
         element: <AboutUs />
       }, {
         path: '/page/how-to-play',
         element: <HowToPlay />
-      }, {
-        path: '/page/tournaments',
-        element: <Tournaments />
-      }, {
-        path: 'page/types-of-players',
-        element: <TypesOfPlayers />
       }
     ]
   }
