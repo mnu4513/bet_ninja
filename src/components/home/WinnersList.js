@@ -25,7 +25,7 @@ const CarouselPage = () => {
 
   return (
     <div className="carousel-container">
-      <AnnouncementCarousel/>
+      {/* <AnnouncementCarousel/> */}
       <h1>Top Winners</h1>
       <Slider {...settings}>
         {listOfWinners.map((x) => (

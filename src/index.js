@@ -66,7 +66,7 @@ const appRouter = createBrowserRouter([
         path: '/policy/refund-cancellations',
         element: <RefundCancellation />
       }, {
-        path: 'refer-earn',
+        path: '/policy/refer-earn',
         element: <ReferEarn />
       }, {
         path: '/page/about-us',

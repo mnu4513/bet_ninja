@@ -46,7 +46,7 @@ const Footer = () => {
             <h3>QUICK LINKS</h3>
             <ul>
               <li>
-                <Link to='/refer-earn' >Refer and Earn</Link>
+                <Link to='/policy/refer-earn' >Refer and Earn</Link>
               </li>
 
               <li>
@@ -61,11 +61,11 @@ const Footer = () => {
         </div>
 
         <div className='content'>
-          <h3>Contect US</h3>
+          <h3>Contact US</h3>
           <p>
             #15A, 4th Floor, City Vista, <br /> Tower A, Fountain Road, Kharadi,<br /> Pune, MH - 411014 <br />
             Email : support@betninja.co.in <br />
-            Phone : 020-67320405
+            Phone : +91-8602695518
           </p>
         </div>
 

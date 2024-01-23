@@ -3,11 +3,10 @@ import React, { useState, useEffect } from 'react';
 import './AnnouncementCarousel.css'; // Import your custom CSS file for styling
 
 const announcements = [
-  "Hello Withdrawls typically take 1-2 hours to process. We appreciate your patience and request that you wait for the status success before attempting to access your bank or e-wallet. Happy Gaming.",
-  "Hello Withdrawls typically take 1-2 hours to process. We appreciate your patience and request that you wait for the status success before attempting to access your bank or e-wallet. Happy Gaming.",
-  "Hello Withdrawls typically take 1-2 hours to process. We appreciate your patience and request that you wait for the status success before attempting to access your bank or e-wallet. Happy Gaming.",
-  "Hello Withdrawls typically take 1-2 hours to process. We appreciate your patience and request that you wait for the status success before attempting to access your bank or e-wallet. Happy Gaming."
-];
+  "Minors are not allowed to participate in the game.",
+  "Hello Withdrawls typically take 1-2 hours to process.",
+  " Must tide the correct bank or e-wallet details."
+ ];
 
 const AnnouncementCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -23,7 +22,7 @@ const AnnouncementCarousel = () => {
   }, []);
 
   return (
-    <div className="announcement-carousel">
+    <div className="announcement-carousel text-danger">
 
       <div className="announcement-text">
         {announcements.map((announcement, index) => (
