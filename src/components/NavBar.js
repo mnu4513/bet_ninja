@@ -1,64 +1,72 @@
-// StyledNavbar.js
-import React from 'react';
-import { Navbar, Nav, Container, Button } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
-import an from '../assets/img/android.png';
-import home_icon from '../assets/img/home_icon.webp'
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import { NavDropdown } from 'react-bootstrap';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import home_icon from '../assets/img/home_icon.webp';
 
-const StyledNavbar = () => {
 
-    const handleDownload = () => {
-        const githubRawURL = 'https://github.com/mnu4513/text_utils/raw/app/code_sbs/app-release.apk';
-        const a = document.createElement('a');
-        a.href = githubRawURL;
-        a.download = 'your-app.zip'; // Specify the filename
-        a.click();
+
+function NavScrollExample() {
+
+    const [loggedIn, setLoggedIn] = useState(true);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+
+    }, [loggedIn]);
+
+    function logout() {
+        localStorage.clear();
+        setLoggedIn(false);
+        navigate("/home")
     };
-
-    const navbarStyle = {
-        backgroundImage: "url('../assets/img/bg.jpg')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-    };
-
-    const anStyle = {
-        height: "30px",
-        borderRadius: "15px",
-        marginRight: "15px"
-    }
-
-    const homeStyle = {
-        marginLeft: "55px"
-    }
 
     return (
-        <>
-            <Navbar bg="dark"  variant="dark" expand="md" fixed="top" >
-                <Container style={navbarStyle}>
-                <Navbar.Brand as={NavLink} to='/'> <img src={home_icon} alt='Home' height="30px" style={{borderRadius: "5px"}} /> </Navbar.Brand>
+        <Navbar bg="light" expand="lg" className='navbar'>
+            <Container fluid>
+                <Navbar.Brand as={NavLink} to="/"><img src={home_icon} width={130} height={40} alt='home'/> </Navbar.Brand>
+                <Navbar.Toggle aria-controls="navbarScroll" />
+                <Navbar.Collapse id="navbarScroll">
+                    <Nav
+                        className="me-auto my-2 my-lg-0"
+                        style={{ maxHeight: '100px' }}
+                        navbarScroll
+                    >
+                        <Nav.Link as={NavLink} to="/home">Home</Nav.Link>
+                        {/* <Nav.Link to="/action2"> {user.name} </Nav.Link> */}
+                        <NavDropdown title="Opions" id="navbarScrollingDropdown">
+                            <NavDropdown.Item as={NavLink} to="/popular-movies" >Popular</NavDropdown.Item>
+                           
 
-                    {/* <Navbar.Brand as={NavLink} to="/"><img src={home} alt="LOGO" style={homeStyle}/></Navbar.Brand> */}
-                    <Navbar.Toggle aria-controls="navbar-nav" />
-                    <Navbar.Collapse id="navbar-nav">
-                        <Nav className="ml-auto">
-                            <Nav.Link as={NavLink} to="/home"><Button className='btn btn-danger'>Home</Button></Nav.Link>
-                            <Nav.Link as={NavLink} to="/page/about-us"><Button className='btn btn-danger'>About</Button></Nav.Link>
-                            <Nav.Link as={NavLink} to="/contact-me"><Button className='btn-danger'>Contact</Button></Nav.Link>
-                            <Nav.Link as={NavLink} to="/policy/refer-earn"><Button className='btn-danger'>Refer Earn</Button></Nav.Link>
-                        </Nav>
+                            <NavDropdown.Divider />
+                        </NavDropdown>
 
-                  
-                            <Button className='e-flex' variant='outline-success' onClick={() => handleDownload()} style={homeStyle}> <img src={an} alt="an" style={anStyle}/> PLAY</Button>
-                      
-                    </Navbar.Collapse>
-                </Container><br /><br />
-            </Navbar>
-            <br />
-            <br />
-            <br />
-        </>
+                    </Nav>
+                    <Form className="d-flex">
+
+
+                        {
+                            localStorage.getItem('name') ?
+                                <Button variant='outline-danger' className='mx-3'> {localStorage.getItem('name')} </Button> :
+                                null
+                        }
+
+
+                        {
+                            !localStorage.getItem('isLoggedIn') ?
+                                <Button variant="outline-primary" as={NavLink} to='/login'>Login</Button> :
+                                <Button variant="outline-danger" type='submit' onClick={() => logout()} >Logout</Button>
+                        }
+
+                    </Form>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
     );
 };
 
-export default StyledNavbar;
+export default NavScrollExample;
