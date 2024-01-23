@@ -3,14 +3,15 @@ import './AsideHome.css';
 import { Button } from 'react-bootstrap';
 import android from '../../assets/img/android.png';
 import AnnouncementCarousel from './AnnouncementCarousel';
+import { appUrl } from './Config';
 
 const AsideHome = () => {
 
   const handleDownload = () => {
-    const githubRawURL = 'https://github.com/mnu4513/text_utils/raw/app/code_sbs/app-release.apk';
+    const githubRawURL = {appUrl};
     const a = document.createElement('a');
     a.href = githubRawURL;
-    a.download = 'your-app.zip'; // Specify the filename
+    a.download = 'bet-ninja.apk'; // Specify the filename
     a.click();
   };
 

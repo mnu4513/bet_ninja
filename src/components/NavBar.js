@@ -3,15 +3,16 @@ import React from 'react';
 import { Navbar, Nav, Container, Button } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import an from '../assets/img/android.png';
-import home_icon from '../assets/img/home_icon.webp'
+import home_icon from '../assets/img/home_icon.webp';
+import { appUrl } from './home/Config';
 
 const StyledNavbar = () => {
 
     const handleDownload = () => {
-        const githubRawURL = 'https://github.com/mnu4513/text_utils/raw/app/code_sbs/app-release.apk';
+        const githubRawURL = {appUrl};
         const a = document.createElement('a');
         a.href = githubRawURL;
-        a.download = 'your-app.zip'; // Specify the filename
+        a.download = 'bet-ninja.apk'; // Specify the filename
         a.click();
     };
 

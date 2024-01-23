@@ -7,7 +7,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './CarouselPage.css'; // Import your custom CSS file for styling
 import WinnerCard from './WinnerCard'; // Assuming you have a WinnerCard component
-import AnnouncementCarousel from './AnnouncementCarousel';
+// import AnnouncementCarousel from './AnnouncementCarousel';
 
 const CarouselPage = () => {
 

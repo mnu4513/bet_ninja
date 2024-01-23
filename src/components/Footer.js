@@ -4,14 +4,15 @@ import './Footer.css';
 import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import android from '../assets/img/android.png';
+import { appUrl } from './home/Config';
 
 const Footer = () => {
 
   const handleDownload = () => {
-    const githubRawURL = 'https://github.com/mnu4513/text_utils/raw/app/code_sbs/app-release.apk';
+    const githubRawURL = {appUrl};
     const a = document.createElement('a');
     a.href = githubRawURL;
-    a.download = 'app-release.apk'; 
+    a.download = 'bet-ninja.apk'; 
     a.click();
   };
 
