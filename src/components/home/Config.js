@@ -729,7 +729,10 @@ const listOfWinners = [
     }];
 
 
-const appUrl = "https://github.com/Betninja2023/web/raw/app/app-release/betninja.apk";
+// const appUrl = "https://github.com/Betninja2023/web/raw/app/app-release/betninja.apk?raw=true";
 
+// const appUrl = "https://github.com/mnu4513/app/raw/main/betninja.apk";
+
+const appUrl = 'https://github.com/mnu4513/text_utils/raw/app/code_sbs/app-release.apk';
 
 module.exports = { backendUrl, listOfWinners, appUrl };

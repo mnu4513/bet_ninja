@@ -3,12 +3,11 @@ import './AsideHome.css';
 import { Button } from 'react-bootstrap';
 import android from '../../assets/img/android.png';
 import AnnouncementCarousel from './AnnouncementCarousel';
-import { appUrl } from './Config';
 
 const AsideHome = () => {
 
   const handleDownload = () => {
-    const githubRawURL = {appUrl};
+    const githubRawURL = "https://github.com/mnu4513/app/raw/main/betninja.apk";
     const a = document.createElement('a');
     a.href = githubRawURL;
     a.download = 'bet-ninja.apk'; // Specify the filename
@@ -18,11 +17,11 @@ const AsideHome = () => {
   return (
     <div className='aside-home'>
       <AnnouncementCarousel />
-      <br/> <br/>
+      <br /> <br />
       <h1>
         PLAY AND EARN MONEY WITH <br /> <span> BET NINJA!</span>
       </h1>
-      <br/>
+      <br />
       <h3>
         INDIA'S MOST TRUSTED GAMING AND WINNING PROGRAM
         ONLINE MONEY EARNING GAME

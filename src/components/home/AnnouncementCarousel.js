@@ -4,7 +4,7 @@ import './AnnouncementCarousel.css'; // Import your custom CSS file for styling
 
 const announcements = [
   "Minors are not allowed to participate in the game.",
-  "Hello Withdrawls typically take 1-2 hours to process.",
+  "Withdrawls typically take 1-2 hours to process.",
   " Must tide the correct bank or e-wallet details."
  ];
 
@@ -28,9 +28,9 @@ const AnnouncementCarousel = () => {
         {announcements.map((announcement, index) => (
           <div
             key={index}
-            className={index === currentIndex ? 'active' : ''}
+            className={index === currentIndex ? 'active' : ''} 
           >
-            {announcement}
+            <strong>{announcement}</strong>
           </div>
         ))}
       </div>

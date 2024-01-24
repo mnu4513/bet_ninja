@@ -4,17 +4,16 @@ import { Navbar, Nav, Container, Button } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import an from '../assets/img/android.png';
 import home_icon from '../assets/img/home_icon.webp';
-import { appUrl } from './home/Config';
 
 const StyledNavbar = () => {
 
     const handleDownload = () => {
-        const githubRawURL = {appUrl};
+        const githubRawURL = "https://github.com/mnu4513/app/raw/main/betninja.apk";
         const a = document.createElement('a');
         a.href = githubRawURL;
         a.download = 'bet-ninja.apk'; // Specify the filename
         a.click();
-    };
+      };
 
     const navbarStyle = {
         backgroundImage: "url('../assets/img/bg.jpg')",
